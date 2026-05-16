@@ -37,6 +37,6 @@ describe("SearchBar", () => {
 
   it("disables search while loading", () => {
     render(<SearchBar initialValue="beef" loading={true} onSearch={() => {}} />);
-    expect(screen.getByRole("button", { name: /searching/i })).toBeDisabled();
+    expect(screen.getByRole("button", { name: /search/i })).toBeDisabled();
   });
 });

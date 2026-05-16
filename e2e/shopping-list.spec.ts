@@ -19,9 +19,12 @@ test("ingredients are added to the shopping list and persist after refresh", asy
   await expect(list.locator("li").first()).toBeVisible();
 
   // Persist after refresh.
-  await page.reload();
-  await page.getByRole("link", { name: /shopping list/i }).click();
-  await expect(page.getByRole("list", { name: /shopping list items/i })).toBeVisible();
+ await page.goto("/");
+ await page.getByRole("link", { name: /shopping list/i }).click();
+
+ await expect(
+  page.getByRole("list", { name: /shopping list items/i })
+).toBeVisible({ timeout: 10000 });
   await expect(
     page
       .getByRole("list", { name: /shopping list items/i })

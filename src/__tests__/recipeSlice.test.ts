@@ -46,10 +46,7 @@ describe("recipeSlice", () => {
   });
 
   it("sets loading=true on searchRecipes.pending and clears any error", () => {
-    const state = reducer(
-      { ...initialState, error: "old" },
-      { type: searchRecipes.pending.type }
-    );
+    const state = reducer({ ...initialState, error: "old" }, { type: searchRecipes.pending.type });
     expect(state.loading).toBe(true);
     expect(state.error).toBeNull();
   });

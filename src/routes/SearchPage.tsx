@@ -7,11 +7,7 @@ import LoadingState from "@/components/ui/LoadingState";
 import ErrorState from "@/components/ui/ErrorState";
 import EmptyState from "@/components/ui/EmptyState";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import {
-  searchRecipes,
-  setSearchTerm,
-  setSelectedMeal,
-} from "@/store/slices/recipeSlice";
+import { searchRecipes, setSearchTerm, setSelectedMeal } from "@/store/slices/recipeSlice";
 import { openRecipeModal } from "@/store/slices/uiSlice";
 import type { Meal } from "@/features/recipes/types/meal";
 
@@ -40,8 +36,8 @@ export default function SearchPage() {
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold text-slate-900">Find a recipe</h2>
         <p className="text-sm text-slate-600">
-          Search TheMealDB. Click any result to see ingredients, instructions, and add it to
-          your shopping list.
+          Search TheMealDB. Click any result to see ingredients, instructions, and add it to your
+          shopping list.
         </p>
       </div>
 

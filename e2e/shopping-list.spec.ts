@@ -1,8 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("ingredients are added to the shopping list and persist after refresh", async ({
-  page,
-}) => {
+test("ingredients are added to the shopping list and persist after refresh", async ({ page }) => {
   await page.goto("/");
   await page.getByPlaceholder(/search recipes/i).fill("beef");
   await page.getByRole("button", { name: /^search$/i }).click();
@@ -25,6 +23,9 @@ test("ingredients are added to the shopping list and persist after refresh", asy
   await page.getByRole("link", { name: /shopping list/i }).click();
   await expect(page.getByRole("list", { name: /shopping list items/i })).toBeVisible();
   await expect(
-    page.getByRole("list", { name: /shopping list items/i }).locator("li").first()
+    page
+      .getByRole("list", { name: /shopping list items/i })
+      .locator("li")
+      .first()
   ).toBeVisible();
 });

@@ -3,5 +3,12 @@
   "rules": {
     "@next/next/no-img-element": "off"
   },
-  "ignorePatterns": ["node_modules", ".next", "out", "playwright-report", "test-results", "coverage"]
+  "ignorePatterns": [
+    "node_modules",
+    ".next",
+    "out",
+    "playwright-report",
+    "test-results",
+    "coverage"
+  ]
 }

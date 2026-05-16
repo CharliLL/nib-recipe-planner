@@ -30,10 +30,7 @@ const shoppingListSlice = createSlice({
   },
 });
 
-export const {
-  hydrateShoppingList,
-  addMealIngredientsToShoppingList,
-  clearShoppingListItems,
-} = shoppingListSlice.actions;
+export const { hydrateShoppingList, addMealIngredientsToShoppingList, clearShoppingListItems } =
+  shoppingListSlice.actions;
 
 export default shoppingListSlice.reducer;

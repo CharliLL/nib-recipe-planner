@@ -11,9 +11,7 @@ interface AppHeaderProps {
 const navItemClass = ({ isActive }: { isActive: boolean }) =>
   [
     "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-    isActive
-      ? "bg-brand text-white"
-      : "text-slate-700 hover:bg-slate-100 hover:text-slate-900",
+    isActive ? "bg-brand text-white" : "text-slate-700 hover:bg-slate-100 hover:text-slate-900",
   ].join(" ");
 
 export default function AppHeader({ onSurpriseMe, randomLoading }: AppHeaderProps) {
